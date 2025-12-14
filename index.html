@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Serverside | Premium Roblox Client</title>
+    <meta name="description"
+        content="Sea Serverside - The ultimate Roblox serverside client. Web client & Linux app available. $5 lifetime access.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">Sea Serverside</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#tos">TOS</a>
+            <a href="#" class="cta-button-small">Buy Now - $5</a>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Dominate with <span class="gradient-text">Sea Serverside</span></h1>
+            <p class="hero-subtitle">The next generation Roblox serverside client.</p>
+            <div class="platform-badges">
+                <span class="badge"><i class="fa-solid fa-globe"></i> Web Client</span>
+                <span class="badge"><i class="fa-brands fa-linux"></i> Linux (Beta)</span>
+                <span class="badge coming-soon"><i class="fa-brands fa-windows"></i> Windows (Soon)</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#" class="cta-button">Get Lifetime Access ($5)</a>
+                <a href="#tos" class="secondary-button">Read TOS</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card glass">
+                <div class="card-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <div class="card-body">
+                    <div class="code-line"><span class="cmd">require</span>(<span class="id">528173</span>).<span
+                            class="func">load</span>(<span class="str">"Sea"</span>)</div>
+                    <div class="code-line success">> Sea Serverside Loaded!</div>
+                    <div class="code-line info">> Welcome, User.</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features-section">
+        <h2 class="section-title">Why Choose Sea?</h2>
+        <div class="features-grid">
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized for speed and reliability across all supported platforms.</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fa-solid fa-infinity"></i></div>
+                <h3>Lifetime Access</h3>
+                <p>One time payment of $5. No subscriptions. Future updates included.</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Secure & Safe</h3>
+                <p>Built with security in mind to protect your account and data.</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                <h3>Cloud Scripts</h3>
+                <p>Access thousands of community scripts directly from the cloud hub.</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fa-brands fa-discord"></i></div>
+                <h3>24/7 Support</h3>
+                <p>Join our active Discord community for instant help and updates.</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fa-solid fa-code-branch"></i></div>
+                <h3>Active Updates</h3>
+                <p>Weekly patches to ensure compatibility with the latest Roblox versions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Executor Section -->
+    <section id="executor-demo" class="executor-section">
+        <div class="section-header">
+            <h2 class="section-title">Powerful Execution</h2>
+            <p class="section-subtitle">Experience the pinnacle of script execution. Our custom-built editor provides
+                syntax highlighting, auto-completion, and a powerful terminal for real-time debugging, ensuring a
+                seamless development workflow.</p>
+        </div>
+
+        <div class="executor-container glass">
+            <div class="executor-window">
+                <div class="window-topbar">
+                    <span class="window-title"><i class="fa-solid fa-code"></i> Sea Client v2.0</span>
+                    <div class="window-controls">
+                        <div class="win-btn minimize"></div>
+                        <div class="win-btn maximize"></div>
+                        <div class="win-btn close"></div>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="sidebar">
+                        <div class="sidebar-item active"><i class="fa-solid fa-file-code"></i></div>
+                        <div class="sidebar-item"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="sidebar-item"><i class="fa-solid fa-gear"></i></div>
+                    </div>
+                    <div class="main-editor-view">
+                        <div class="editor-area">
+                            <div class="line-numbers">
+                                1<br>2<br>3<br>4<br>5
+                            </div>
+                            <div class="code-content" contenteditable="true">
+                                -- Welcome to Sea Serverside
+                                print("Sea Client Loaded Successfully!")
+                                local sea = require(528173)
+                                sea:Load("Main")
+                            </div>
+                        </div>
+                        <div class="terminal-area">
+                            <div class="terminal-header">
+                                <span>Output</span>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div class="terminal-content">
+                                <span class="log-info">[INFO]: Connected to server region: us-east (72ms)</span>
+                                <span class="log-success">[SUCCESS]: Backdoor verified.</span>
+                                <span class="log-warn">[WARN]: Anti-Cheat detected, bypassing...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-toolbar">
+                    <button class="exec-btn primary"><i class="fa-solid fa-play"></i> Execute</button>
+                    <div class="divider"></div>
+                    <button class="exec-btn"><i class="fa-solid fa-users"></i> Players</button>
+                    <button class="exec-btn"><i class="fa-solid fa-person"></i> R6</button>
+                    <button class="exec-btn"><i class="fa-solid fa-eraser"></i> Clear</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Games Hub Section -->
+    <section id="games-hub" class="games-section">
+        <div class="section-header">
+            <h2 class="section-title">Live Games Hub</h2>
+            <p class="section-subtitle">Real-time statistics of supported infected games.</p>
+        </div>
+
+        <div class="games-grid">
+            <!-- Game Card 1 -->
+            <div class="game-card glass">
+                <div class="game-thumbnail">
+                    <i class="fa-solid fa-hand-fist"></i>
+                    <div class="overlay"></div>
+                </div>
+                <div class="game-status online">
+                    <span class="status-dot"></span> Online
+                </div>
+                <div class="game-info">
+                    <h3>Funny Fighting Game</h3>
+                    <div class="game-stats">
+                        <div class="stat"><i class="fa-solid fa-users"></i> <span class="live-count">17</span> Playing
+                        </div>
+                        <div class="stat"><i class="fa-solid fa-server"></i> Backdoor Active</div>
+                        <div class="stat"><i class="fa-solid fa-wifi"></i> 45ms Ping</div>
+                        <div class="stat"><i class="fa-solid fa-clock"></i> Uptime: 4d 2h</div>
+                    </div>
+                    <button class="join-btn">Join Server</button>
+                </div>
+            </div>
+
+            <!-- Game Card 2 -->
+            <div class="game-card glass">
+                <div class="game-thumbnail" style="background: linear-gradient(45deg, #ff00cc, #333399);">
+                    <i class="fa-solid fa-pills"></i>
+                    <div class="overlay"></div>
+                </div>
+                <div class="game-status online">
+                    <span class="status-dot"></span> Online
+                </div>
+                <div class="game-info">
+                    <h3>Medication</h3>
+                    <div class="game-stats">
+                        <div class="stat"><i class="fa-solid fa-users"></i> <span class="live-count">12</span> Playing
+                        </div>
+                        <div class="stat"><i class="fa-solid fa-server"></i> Backdoor Active</div>
+                        <div class="stat"><i class="fa-solid fa-wifi"></i> 82ms Ping</div>
+                        <div class="stat"><i class="fa-solid fa-clock"></i> Uptime: 12h 30m</div>
+                    </div>
+                    <button class="join-btn">Join Server</button>
+                </div>
+            </div>
+
+            <!-- Game Card 3 -->
+            <div class="game-card glass">
+                <div class="game-thumbnail" style="background: linear-gradient(45deg, #555, #000);">
+                    <i class="fa-solid fa-cube"></i>
+                    <div class="overlay"></div>
+                </div>
+                <div class="game-status warning">
+                    <span class="status-dot"></span> Offline
+                </div>
+                <div class="game-info">
+                    <h3>Baseplate</h3>
+                    <div class="game-stats">
+                        <div class="stat"><i class="fa-solid fa-users"></i> <span class="live-count">0</span> Playing
+                        </div>
+                        <div class="stat"><i class="fa-solid fa-server"></i> Offline</div>
+                        <div class="stat"><i class="fa-solid fa-wifi"></i> -- ms Ping</div>
+                        <div class="stat"><i class="fa-solid fa-triangle-exclamation"></i> Offline</div>
+                    </div>
+                    <button class="join-btn disabled">Details</button>
+                </div>
+            </div>
+
+            <!-- Game Card 4 -->
+            <div class="game-card glass">
+                <div class="game-thumbnail" style="background: linear-gradient(45deg, #00C9FF, #92FE9D);">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <div class="overlay"></div>
+                </div>
+                <div class="game-status online">
+                    <span class="status-dot"></span> Online
+                </div>
+                <div class="game-info">
+                    <h3>Cool Awesome Epic Roblox Game</h3>
+                    <div class="game-stats">
+                        <div class="stat"><i class="fa-solid fa-users"></i> <span class="live-count">8</span> Playing
+                        </div>
+                        <div class="stat"><i class="fa-solid fa-server"></i> Backdoor Active</div>
+                        <div class="stat"><i class="fa-solid fa-wifi"></i> 110ms Ping</div>
+                        <div class="stat"><i class="fa-solid fa-clock"></i> Uptime: 1h 5m</div>
+                    </div>
+                    <button class="join-btn">Join Server</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h2 class="section-title">Terms of Service</h2>
+    <p class="tos-subtitle">Please read carefully before using Sea Serverside.</p>
+
+    <div class="tos-container glass">
+
+        <div class="tos-group forbidden">
+            <h3><i class="fa-solid fa-ban"></i> Strictly Prohibited (:downtime:)</h3>
+            <ul>
+                <li>Prompt users to buy a gamepass or mass teleport</li>
+                <li>Shutdown without reason (Shutting down just to get rid of players)</li>
+                <li>Mass Ban/Kick (;ban all, ;kick all, ;crash all)</li>
+                <li>Annoy people so hard they leave</li>
+                <li>ABSOLUETLY NO MAP DESTRUCTION WITHOUT PERMISSIONS</li>
+                <li>Absolutely NO CONDOS, No NSFW!</li>
+            </ul>
+        </div>
+
+        <div class="tos-group allowed">
+            <h3><i class="fa-solid fa-check"></i> You Can (:Verify:)</h3>
+            <ul>
+                <li>Give people weapons and gears</li>
+                <li>Give your FRIENDS requires (Do not give other players except friends)</li>
+                <li>Kill people, but please dont make it unplayable</li>
+            </ul>
+        </div>
+
+        <div class="tos-group special">
+            <h3><i class="fa-solid fa-circle-exclamation"></i> Special Permissions</h3>
+            <ul>
+                <li><i class="fa-solid fa-user-shield"></i> You can abuse <strong>IF YOU HAVE PERMISSION FROM STAFF OR
+                        DEVELOPERS</strong> (:sanswink:)</li>
+                <li><i class="fa-solid fa-video"></i> YOU CAN ABUSE IN CONDO GAMES (Record so we can clipfarm it on
+                    socials!)</li>
+            </ul>
+        </div>
+
+    </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sea Serverside. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
