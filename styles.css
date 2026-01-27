@@ -1,13 +1,17 @@
 :root {
-    --primary: #00f2ff;
-    --primary-dark: #00c3cc;
-    --secondary: #0066ff;
-    --bg-dark: #050a14;
-    --text-light: #e6f1ff;
-    --text-dim: #8892b0;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --card-hover: rgba(255, 255, 255, 0.1);
+    --primary: #2b70fa;
+    /* Royal Blue */
+    --primary-dark: #1a4bd6;
+    --secondary: #00d9ff;
+    /* Cyan accent */
+    --bg-dark: #02040a;
+    /* Very dark blue-black */
+    --text-light: #f0f7ff;
+    --text-dim: #94a9c9;
+    --glass-bg: rgba(20, 40, 80, 0.3);
+    /* Blue-tinted glass */
+    --glass-border: rgba(60, 100, 200, 0.2);
+    --card-hover: rgba(43, 112, 250, 0.15);
     --danger: #ff4d4d;
     --success: #00ff88;
     --warning: #ffcc00;
@@ -21,14 +25,14 @@
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-light);
     overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Background Animation */
+/* Background Animation - Blue Grid */
 .background-animation {
     position: fixed;
     top: 0;
@@ -36,18 +40,42 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background: radial-gradient(circle at 10% 20%, rgba(0, 242, 255, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(0, 102, 255, 0.1) 0%, transparent 40%);
-    animation: bgPulse 10s ease-in-out infinite alternate;
+    background-color: #02040a;
+    background-image:
+        linear-gradient(rgba(43, 112, 250, 0.25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(43, 112, 250, 0.25) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center top;
+
+    /* Default position if JS fails/loads late */
+    --x: 50vw;
+    --y: 50vh;
+
+    /* The spotlight mask */
+    mask-image: radial-gradient(circle 600px at var(--x) var(--y), black 10%, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle 600px at var(--x) var(--y), black 10%, transparent 70%);
 }
 
+/* Optional: Keep a subtle pulse or movement if desired, or remove animation for a static clean grid */
 @keyframes bgPulse {
     0% {
         transform: scale(1);
     }
 
     100% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes bgPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
         transform: scale(1.1);
+        opacity: 1;
     }
 }
 
@@ -60,8 +88,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(10px);
-    background: rgba(5, 10, 20, 0.7);
+    backdrop-filter: blur(12px);
+    background: rgba(2, 4, 10, 0.7);
     z-index: 1000;
     transition: all 0.3s ease;
     border-bottom: 1px solid transparent;
@@ -315,6 +343,34 @@ body {
     padding: 100px 10%;
 }
 
+/* Scroll Animation States */
+.feature-card,
+.section-title,
+.hero-content,
+.hero-visual {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Stagger animations for grid items */
+.feature-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.feature-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.feature-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -346,23 +402,48 @@ body {
 .feature-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    padding: 2rem;
+    padding: 2.5rem;
+    /* Increased padding */
     border-radius: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine Effect */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.feature-card:hover::before {
+    left: 100%;
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     background: var(--card-hover);
     border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(43, 112, 250, 0.1);
 }
 
 .icon-box {
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: 1.5rem;
+    display: inline-flex;
+    padding: 12px;
+    background: rgba(43, 112, 250, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(43, 112, 250, 0.2);
 }
 
 .feature-card h3 {
