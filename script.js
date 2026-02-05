@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.feature-card, .section-title, .hero-content, .hero-visual');
+    const animatedElements = document.querySelectorAll('.feature-card, .section-title, .hero-content, .hero-visual, .coming-soon-content, .announcement-header, .announcement-text, .announcement-sidebar');
     animatedElements.forEach(el => observer.observe(el));
+
 
     // --- UI Interactions ---
 
