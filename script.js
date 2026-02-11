@@ -33,36 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Executor Demo Interactivity
-    const execBtns = document.querySelectorAll('.exec-btn');
-    const codeContent = document.querySelector('.code-content');
-
-    if (execBtns.length > 0) {
-        execBtns.forEach(btn => {
-            btn.addEventListener('click', function () {
-                const originalText = this.innerHTML;
-
-                if (this.innerText.includes('Execute')) {
-                    this.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Executing...';
-                    setTimeout(() => {
-                        this.innerHTML = '<i class="fa-solid fa-check"></i> Executed!';
-                        this.style.background = 'var(--success)';
-                        console.log("Script executed");
-                        setTimeout(() => {
-                            this.innerHTML = originalText;
-                            this.style.background = '';
-                        }, 1500);
-                    }, 800);
-                } else if (this.innerText.includes('Clear')) {
-                    if (codeContent) codeContent.innerText = '';
-                } else {
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => this.style.transform = 'scale(1)', 100);
-                }
-            });
-        });
-    }
-
     // Grid Mouse Animation
     const bgAnimation = document.querySelector('.background-animation');
     if (bgAnimation) {
