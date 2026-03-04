@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Software - PMLEB</title>
+    <meta name="description"
+        content="PMLEB — Python Minecraft Legacy Edition Bridge. A powerful Python interface for Minecraft Legacy Edition's leaked dev PC build.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-hero-icon {
+            width: 90px;
+            height: 90px;
+            background: rgba(43, 112, 250, 0.1);
+            border: 2px solid rgba(43, 112, 250, 0.4);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 0 auto 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--text-dim);
+            font-size: 0.97rem;
+            line-height: 1.6;
+        }
+
+        .feature-list li i {
+            color: var(--primary);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.88rem;
+            color: #a8d8ff;
+            overflow-x: auto;
+            line-height: 1.7;
+            margin-top: 1rem;
+        }
+
+        .code-block .comment {
+            color: #5a7a9a;
+        }
+
+        .code-block .keyword {
+            color: #c678dd;
+        }
+
+        .code-block .string {
+            color: #98c379;
+        }
+
+        .code-block .func {
+            color: #61afef;
+        }
+
+        .code-block .number {
+            color: #d19a66;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(43, 112, 250, 0.12);
+        }
+
+        .info-card-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(43, 112, 250, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .info-card h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(43, 112, 250, 0.15);
+            border: 1px solid rgba(43, 112, 250, 0.3);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.65rem;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">Sea Software</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active" style="color: var(--primary);">Projects</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero" style="min-height: 65vh; padding-top: 100px;">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div class="project-hero-icon">
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <h1 class="hero-title"><span class="gradient-text">PMLEB</span></h1>
+            <p class="hero-subtitle" style="margin: 0 auto 2rem;">
+                Python Minecraft Legacy Edition Bridge, a python bridge that gives you programmatic control over Minecraft Legacy Edition through
+                Python.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://github.com/seasoftware-dev/PMLEB" target="_blank" class="cta-button">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="projects.html" class="cta-button-secondary">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Projects
+                </a>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <span class="badge">Python</span>
+                <span class="badge">Open Source</span>
+                <span class="badge">MIT License</span>
+                <span class="badge">Minecraft Legacy Edition</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview -->
+    <section class="announcement-section" style="padding-top: 0;">
+        <div class="announcement-container">
+            <div class="announcement-text" style="max-width: 900px; margin: 0 auto;">
+                <h3>Overview</h3>
+                <p>
+                    PMLEB (Python Minecraft Legacy Edition Bridge) is a powerful Python interface that connects directly
+                    to Minecraft Legacy Edition via the leaked dev PC build, giving you full programmatic control over
+                    your game environment.
+                </p>
+                <p>
+                    Whether you want to execute in-game commands, manage gamerules, or build your own automation tools,
+                    PMLEB provides a clean, extensible API to do it all, with <strong>Python</strong> and no
+                    complicated dependencies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Info Cards -->
+    <section class="features-section" style="padding-top: 1rem;">
+        <h2 class="section-title">Features</h2>
+        <div class="info-grid" style="max-width: 1000px; margin: 0 auto;">
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fa-solid fa-terminal"></i></div>
+                <h4>Command Execution</h4>
+                <p>Run any in-game command directly from Python, automate anything the game's console supports.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fa-solid fa-sliders"></i></div>
+                <h4>Gamerule Management</h4>
+                <p>Read and modify gamerules programmatically, no need to open the game's interface.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                <h4>Extensible API</h4>
+                <p>New features are added regularly. The API is designed to be easy to expand and integrate with your
+                    own tools.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fa-brands fa-python"></i></div>
+                <h4>Pure Python</h4>
+                <p>No complicated dependencies, if you have Python 3.8+, you're ready to go.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section class="features-section">
+        <h2 class="section-title">Getting Started</h2>
+        <div style="max-width: 750px; margin: 0 auto;">
+            <div class="info-card">
+                <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">Prerequisites</h4>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Python 3.8 or higher installed</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Minecraft Legacy Edition (dev PC build)</li>
+                </ul>
+
+
+                <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://github.com/seasoftware-dev/PMLEB" target="_blank" class="cta-button-small">
+                        <i class="fa-brands fa-github"></i> Full Docs on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributing -->
+    <section class="announcement-section">
+        <div class="announcement-container">
+            <div class="announcement-text" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h3>Contributing</h3>
+                <p>
+                    Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a
+                    pull request on GitHub. This project is licensed under the <strong>MIT License</strong>.
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://github.com/seasoftware-dev/PMLEB" target="_blank" class="cta-button">
+                        <i class="fa-brands fa-github"></i> Contribute on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Sea Software. Building software that matters.</p>
+        <p>PMLEB is not affiliated with Mojang Studios or Microsoft.</p>
+        <p>Minecraft is a trademark of Mojang AB. We will not give information on how to get the Leaked Developer Build.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
