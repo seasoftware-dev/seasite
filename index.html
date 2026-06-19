@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Software</title>
+    <meta name="description" content="Sea Software — Building software that matters.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="mesh"></div>
+
+    <nav id="navbar">
+        <div class="nav-links" style="width: 100%; justify-content: center;">
+            <a href="index.html" class="active">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <div class="page">
+        <div class="hero" style="padding-top: 180px; padding-bottom: 120px;">
+            <p class="eyebrow">// software development</p>
+            <h1>Building tools that <span class="grad">matter.</span></h1>
+            <p class="hero-sub" style="font-size: 1.15rem; max-width: 60ch;">Sea Software develops high-performance, open-source solutions with a strict focus on user privacy, raw performance, and technical transparency.</p>
+            
+            <div class="hero-actions">
+                <a href="projects.html" class="btn-primary">View Projects</a>
+                <a href="about.html" class="btn-ghost">Learn About Us</a>
+            </div>
+            
+            <div class="socials" style="justify-content: flex-start; margin-top: 3rem;">
+                <a href="https://discord.gg/56aX4XrGtP" target="_blank" class="soc" title="Discord">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://github.com/seasoftware-dev" target="_blank" class="soc" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://x.com/SeaSoftwareDev" target="_blank" class="soc" title="X">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 1200 1227">
+                        <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <section class="section">
+            <p class="sec-label">Our Philosophy</p>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="info-card">
+                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Privacy as a Default</h4>
+                    <p>We don't do telemetry, tracking, or unnecessary data collection. Our tools are built to protect your workflow from the ground up, not harvest it.</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h4>Uncompromising Performance</h4>
+                    <p>Bloatware is unacceptable. Whether it's a C++ browser architecture or a legacy Python bridge, we engineer for speed and minimal overhead.</p>
+                </div>
+                <div class="info-card">
+                    <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                    <h4>Auditable Code</h4>
+                    <p>Open-source isn't just a label; it's a requirement for trust. You have full access to inspect, modify, and verify exactly what our software is doing.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="section" style="padding-bottom: 120px;">
+            <div class="mission-grid">
+                <div class="mission-label">Featured</div>
+                <div>
+                    <h2 class="sec-title">Tsunami Browser</h2>
+                    <p style="color:var(--text-mid);font-size:1.05rem;line-height:1.75;margin-bottom:1.5rem;max-width:60ch;">
+                        Our flagship project. A completely custom C++ browser engineered to take back control of your digital footprint. Fast, secure, and entirely open.
+                    </p>
+                    <a href="https://github.com/seasoftware-dev/tsunami" target="_blank" class="btn-ghost">
+                        <i class="fa-brands fa-github"></i> Inspect the Source
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sea Software. Building software that matters.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
